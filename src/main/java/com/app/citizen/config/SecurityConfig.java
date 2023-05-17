@@ -1,6 +1,6 @@
 package com.app.citizen.config;
 
-import com.app.citizen.auth.LoginSuccesshandler;
+import com.app.citizen.auth.LoginSuccessHandler;
 import com.app.citizen.service.CustomUserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +8,6 @@ import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -66,6 +65,6 @@ public class SecurityConfig {
 
   @Bean
   public AuthenticationSuccessHandler loginSuccessHandler() {
-    return new LoginSuccesshandler();
+    return new LoginSuccessHandler();
   }
 }
