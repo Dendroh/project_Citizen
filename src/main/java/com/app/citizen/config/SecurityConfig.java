@@ -34,19 +34,19 @@ public class SecurityConfig {
               .anyRequest().permitAll()
               .and()
 
-//            .formLogin()
-//              .loginPage("/login")
-//              .loginProcessingUrl("/login-process")
-//              .usernameParameter("username")
-//              .passwordParameter("password")
-//              .successHandler(loginSuccessHandler())
-//              .and()
-
-            .oauth2Login()
-              .clientRegistrationRepository(clientRegistrationRepository())
-              .authorizedClientService(authorizedClientService())
+            .formLogin()
+              .loginPage("/login")
+              .loginProcessingUrl("/login-process")
+              .usernameParameter("username")
+              .passwordParameter("password")
               .successHandler(loginSuccessHandler())
               .and()
+
+//            .oauth2Login()
+//              .clientRegistrationRepository(clientRegistrationRepository())
+//              .authorizedClientService(authorizedClientService())
+//              .successHandler(loginSuccessHandler())
+//              .and()
 
             .logout()
               .deleteCookies("SESSION")
@@ -54,7 +54,7 @@ public class SecurityConfig {
               .and()
 
             .csrf()
-              .and()
+              .disable()
 
             .headers()
               .defaultsDisabled()
