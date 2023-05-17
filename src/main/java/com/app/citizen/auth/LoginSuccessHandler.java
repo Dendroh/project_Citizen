@@ -17,7 +17,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
           throws IOException, ServletException {
     HttpSession session = request.getSession();
 
-    Cookie cookie = new Cookie("LOGIN", session.getId());
+    Cookie cookie = new Cookie("SESSION", session.getId());
     response.addCookie(cookie);
 
     response.sendRedirect("/");

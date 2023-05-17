@@ -3,6 +3,8 @@ package com.app.citizen.config;
 import com.app.citizen.controller.ControllerBase;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.MessageSource;
+import org.springframework.context.MessageSourceAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -18,12 +20,18 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackageClasses = ControllerBase.class)
-public class WebConfig implements WebMvcConfigurer, ApplicationContextAware{
+public class WebConfig implements WebMvcConfigurer, ApplicationContextAware, MessageSourceAware {
   private ApplicationContext applicationContext;
+  private MessageSource messageSource;
 
   @Override
   public void setApplicationContext(ApplicationContext applicationContext) {
     this.applicationContext = applicationContext;
+  }
+
+  @Override
+  public void setMessageSource(MessageSource messageSource) {
+    this.messageSource = messageSource;
   }
 
   @Override
@@ -56,6 +64,7 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware{
   public SpringTemplateEngine templateEngine() {
     SpringTemplateEngine templateEngine = new SpringTemplateEngine();
     templateEngine.setTemplateResolver(templateResolver());
+    templateEngine.setTemplateEngineMessageSource(messageSource);
     templateEngine.addDialect(new SpringSecurityDialect());
 
     return templateEngine;
