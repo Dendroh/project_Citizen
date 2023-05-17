@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8" />
+    <title>Main</title>
+</head>
+<body>
+    <h1>Main</h1>
+
+    <th:block th:include="fragments/heading" />
+    <ul>
+        <li sec:authorize="hasAuthority('ROLE_TEACHER')">
+            <a href="/teacher/1">for Teachers</a>
+        </li>
+        <li sec:authorize="hasAuthority('ROLE_STUDENT')">
+            <a href="/student/2">for Students</a>
+        </li>
+    </ul>
+
+    <br />
+
+</body>
+</html>
