@@ -28,8 +28,8 @@ public class SecurityConfig {
   public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
     return httpSecurity
             .authorizeHttpRequests()
-              .requestMatchers("/teacher/**").hasAnyAuthority("ROLE_TEACHER")
-              .requestMatchers("/student/**").hasAnyAuthority("ROLE_STUDENT")
+              .requestMatchers("/admin/**").hasAnyAuthority("ROLE_ADMIN")
+              .requestMatchers("/guest/**").hasAnyAuthority("ROLE_GUEST")
               .requestMatchers("redirect-index").authenticated()
               .anyRequest().permitAll()
               .and()

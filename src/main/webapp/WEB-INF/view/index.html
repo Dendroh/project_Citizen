@@ -11,11 +11,11 @@
 
     <th:block th:include="fragments/heading" />
     <ul>
-        <li sec:authorize="hasAuthority('ROLE_TEACHER')">
-            <a href="/teacher/1">for Teachers</a>
+        <li sec:authorize="hasAuthority('ROLE_ADMIN')">
+            <a href="/admin/1">for Admin</a>
         </li>
-        <li sec:authorize="hasAuthority('ROLE_STUDENT')">
-            <a href="/student/2">for Students</a>
+        <li sec:authorize="hasAuthority('ROLE_GUEST')">
+            <a href="/guest/2">for Guest</a>
         </li>
     </ul>
 
