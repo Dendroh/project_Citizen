@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>주민등록등본</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style1.css">
 </head>
 
 <body>
@@ -17,55 +17,74 @@
 </div>
 <div style="width: 700px; border: black solid 1px; margin: 10px; padding: 20px">
     <h1>주민등록등본</h1></br></br>
-    <table>
+    <table style="width: 550px">
         <thead>
         <tr>
             <th style="width: 150px;">등록기준지</th>
-            <th style="width: 400px;">서울특별시 영등포구 여의도동 1번지 1234</th>
+            <th style="width: 400px;" th:text="${baseResident.registrationBaseAddress}" }></th>
         </tr>
         </thead>
-    </table></br></br>
+    </table>
+    </br>
     <table>
         <thead>
         <tr>
             <th style="width: 80px;">구분</th>
-            <th style="width: 250px;">성명</th>
+            <th style="width: 80px;">성명</th>
             <th style="width: 200px;">출생연월일</th>
             <th style="width: 200px;">주민등록번호</th>
             <th style="width: 70px;">성별</th>
-            <th style="width: 70px;">본적</th>
+            <th style="width: 250px;">본적</th>
         </tr>
         </thead>
         <tbody>
+        <tr>
+            <td style="width: 80px;" th:text="본인"></td>
+            <td style="width: 80px;" th:text="${baseResident.name}"></td>
+            <td style="width: 200px;" th:text="${baseResident.formattedBirthDate}"></td>
+            <td style="width: 200px;" th:text="${baseResident.residentRegistrationNumber}"></td>
+            <td style="width: 70px;" th:text="${baseResident.genderCode}"></td>
+            <td style="width: 250px;" th:text="${baseResident.registrationBaseAddress}"></td>
+        </tr>
         </tbody>
-    </table></br></br>
-    <table>
+    </table>
+    </br></br>
+    <table style="width: 550px">
         <thead>
         <tr>
             <th style="width: 150px;">가족사항</th>
         </tr>
         </thead>
-    </table></br>
+    </table>
+    </br>
     <table>
         <thead>
         <tr>
-            <th style="width: 80px;">구분</th>
-            <th style="width: 250px;">성명</th>
-            <th style="width: 200px;">출생연월일</th>
+            <th style="width: 80px;">세대주 관계</th>
+            <th style="width: 80px;">성명</th>
             <th style="width: 200px;">주민등록번호</th>
-            <th style="width: 70px;">성별</th>
-            <th style="width: 70px;">본적</th>
+            <th style="width: 200px;">신고일</th>
+            <th style="width: 70px;">변동사유</th>
         </tr>
         </thead>
         <tbody>
+        <tr th:each="item, i: ${household}">
+            <td style="width: 80px;" th:text="${item.householdRelationshipCode}"></td>
+            <td style="width: 80px;" th:text="${item.householdCompositionName}"></td>
+            <td style="width: 80px;" th:text="${item.householdCompositionRegistrationNumber}"></td>
+            <td style="width: 80px;" th:text="${item.householdCompositionReportDate}"></td>
+            <td style="width: 80px;" th:text="${item.householdCompositionChangeReasonCode}"></td>
+        </tr>
         </tbody>
-    </table></br></br>
-    <h5>위 가족관계증명서는 가족관계등록부의 기록사항과 틀림없음을 증명합니다.</h5></br>
-    <h5>2023년 5월 17일</h5></br>
-    <h3>법원행정처 전산정보중앙관리소 전산운영책임관 홍길동</h3></br>
-    <h4 style="text-align: left">위 증명서는 가족관계의 등록 등에 관한 법률 제 15조 제4항 및 가족관계의 등록 등에 관한 규칙 제 21조의2제2항에 따른 등록사항을 현출한 특정증명서입니다.</h4>
-    <h4 style="text-align: right">발급시각 : 17시 01분</h4>
-    <h4 style="text-align: right">신청인 : 김본인</h4></br></br>
+    </table>
+    </br></br>
+    <h5>위 가족관계증명서는 가족관계등록부의 기록사항과 틀림없음을 증명합니다.</h5>
+    <h5 th:text="${#calendars.format(#calendars.createNow(), 'yyyy년 MM월 dd일')}"></h5>
+    <h3>법원행정처 전산정보중앙관리소 전산운영책임관 홍길동</h3>
+    <h4 style="text-align: left">위 증명서는 가족관계의 등록 등에 관한 법률 제 15조 제4항 및 가족관계의 등록 등에 관한 규칙 제 21조의2제2항에 따른 등록사항을 현출한
+        특정증명서입니다.</h4>
+    <h4 style="text-align: right" th:text="${#calendars.format(#calendars.createNow(), '발급시각 : HH시 mm분')}"></h4>
+    <h4 style="text-align: right" th:text="${baseResident.name}"></h4></br>
     <h6 style="vertical-align: bottom">발행번호 : 0000-0000-0000-0000</h6>
     <h6 style="vertical-align: bottom">전자가족관계등록시스템의 증명서 진위확인 메뉴에서 발급일부터 3개월까지 위변조 여부를 확인할 수 있습니다.</h6>
 </div>

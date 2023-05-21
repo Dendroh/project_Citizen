@@ -1,0 +1,14 @@
+
+„
+java:S1104"bMake familyRelationshipCode a static final constant or non-public and provide accessors if needed.(Ô×Áüÿÿÿÿ8¨Í®ğƒ1
+{
+java:S1104
+"^Make familyResidentName a static final constant or non-public and provide accessors if needed.(¯ÕÃí8©Í®ğƒ1
+…
+java:S1104"cMake familyResidentBirthDate a static final constant or non-public and provide accessors if needed.(·¦œèùÿÿÿÿ8©Í®ğƒ1
+
+java:S1104"lMake familyResidentRegistrationNumber a static final constant or non-public and provide accessors if needed.(ÜÀĞ¿ÿÿÿÿÿ8©Í®ğƒ1
+†
+java:S1104"dMake familyResidentGenderCode a static final constant or non-public and provide accessors if needed.(‚ğ¡çøÿÿÿÿ8©Í®ğƒ1
+“
+java:S1104"qMake familyResidentRegistrationBaseAddress a static final constant or non-public and provide accessors if needed.(èÓ‡ïıÿÿÿÿ8©Í®ğƒ1

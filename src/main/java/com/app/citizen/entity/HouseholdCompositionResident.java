@@ -16,7 +16,7 @@ public class HouseholdCompositionResident {
   private Pk pk;
 
   @Column(name = "report_date")
-  private LocalDate familyRelationshipCode;
+  private LocalDate HouseholdReportDate;
 
   @Column(name = "household_relationship_code")
   private String householdRelationshipCode;
