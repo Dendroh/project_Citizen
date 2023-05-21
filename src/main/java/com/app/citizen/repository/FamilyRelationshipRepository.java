@@ -12,4 +12,8 @@ public interface FamilyRelationshipRepository extends JpaRepository<FamilyRelati
 
   @Query("select new com.app.citizen.domain.FamilyResidentDto(f.familyRelationshipCode, fR.name, fR.birthDate, fR.residentRegistrationNumber, fR.genderCode, fR.registrationBaseAddress) from FamilyRelationship f left join f.baseResident bR join f.familyResident fR where bR.residentSerialNumber = :id")
   public List<FamilyResidentDto> findBy(@Param("id") int id);
+
+
+  @Query("select new com.app.citizen.domain.FamilyResidentDto(f.familyRelationshipCode, fR.name, fR.birthDate, fR.residentRegistrationNumber, fR.genderCode, fR.registrationBaseAddress) from FamilyRelationship f left join f.baseResident bR join f.familyResident fR where bR.residentSerialNumber = :id and (f.familyRelationshipCode = '부' or f.familyRelationshipCode = '모')")
+  public List<FamilyResidentDto> getBy(@Param("id") int id);
 }

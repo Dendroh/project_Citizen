@@ -18,4 +18,7 @@ public class FamilyRelationshipService {
     return familyRelationshipRepository.findBy(serialNumber);
   }
 
+  public List<FamilyResidentDto> findParentsBy(int serialNumber) {
+    return familyRelationshipRepository.getBy(serialNumber);
+  }
 }

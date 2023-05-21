@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>출생신고서</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style1.css">
 </head>
 
 <body>
@@ -17,57 +17,69 @@
 </div>
 <div style="width: 700px; border: black solid 1px; margin: 10px; padding: 20px">
     <h1>출생신고서</h1></br></br>
-    <table>
+    <table style="width: 550px">
         <thead>
         <tr>
-            <th style="width: 150px;">등록기준지</th>
-            <th style="width: 400px;">서울특별시 영등포구 여의도동 1번지 1234</th>
+            <th style="width: 150px;">신고일</th>
+            <th style="width: 350px;" th:text="${#calendars.format(#calendars.createNow(), 'yyyy년 MM월 dd일')}"></th>
         </tr>
         </thead>
-    </table></br></br>
+    </table>
+    </br>
+    <h3>출생자</h3>
     <table>
-        <thead>
         <tr>
-            <th style="width: 80px;">구분</th>
-            <th style="width: 250px;">성명</th>
-            <th style="width: 200px;">출생연월일</th>
-            <th style="width: 200px;">주민등록번호</th>
-            <th style="width: 70px;">성별</th>
-            <th style="width: 70px;">본적</th>
+            <td th:text="성명"></td>
+            <td th:text="${birthResident.name}"></td>
         </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table></br></br>
+        <tr>
+            <td th:text="성별"></td>
+            <td th:text="${birthResident.genderCode}"></td>
+        </tr>
+        <tr>
+            <td th:text="출생일시"></td>
+            <td th:text="${birthResident.formattedBirthDateTime}"></td>
+        </tr>
+        <tr>
+            <td th:text="출생장소"></td>
+            <td th:text="${birthResident.birthPlaceCode}"></td>
+        </tr>
+        <tr>
+            <td th:text="등록기준지"></td>
+            <td th:text="${birthResident.registrationBaseAddress}"></td>
+        </tr>
+    </table>
+    </br>
+    <h3>부모</h3>
     <table>
-        <thead>
-        <tr>
-            <th style="width: 150px;">가족사항</th>
+        <tr th:each="item, i: ${birthResidentParent}">
+            <td th:text="${item.familyRelationshipCode}"></td>
+            <td th:text="성명"></td>
+            <td th:text="${item.familyResidentName}"></td>
+            <td th:text="주민등록번호"></td>
+            <td th:text="${item.familyResidentRegistrationNumber}"></td>
         </tr>
-        </thead>
-    </table></br>
-    <table>
-        <thead>
+    </table>
+    </br>
+    <h3>신고인</h3>
+    <table th:each="item, i: ${birthReportResident}">
         <tr>
-            <th style="width: 80px;">구분</th>
-            <th style="width: 250px;">성명</th>
-            <th style="width: 200px;">출생연월일</th>
-            <th style="width: 200px;">주민등록번호</th>
-            <th style="width: 70px;">성별</th>
-            <th style="width: 70px;">본적</th>
+            <td th:text="성명"></td>
+            <td th:text="${item.birthDeathReportResidentName}"></td>
+            <td th:text="주민등록번호"></td>
+            <td th:text="${item.birthDeathReportResidentRegistrationNumber}"></td>
         </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table></br></br>
-    <h5>위 가족관계증명서는 가족관계등록부의 기록사항과 틀림없음을 증명합니다.</h5></br>
-    <h5>2023년 5월 17일</h5></br>
-    <h3>법원행정처 전산정보중앙관리소 전산운영책임관 홍길동</h3></br>
-    <h4 style="text-align: left">위 증명서는 가족관계의 등록 등에 관한 법률 제 15조 제4항 및 가족관계의 등록 등에 관한 규칙 제 21조의2제2항에 따른 등록사항을 현출한 특정증명서입니다.</h4>
-    <h4 style="text-align: right">발급시각 : 17시 01분</h4>
-    <h4 style="text-align: right">신청인 : 김본인</h4></br></br>
-    <h6 style="vertical-align: bottom">발행번호 : 0000-0000-0000-0000</h6>
-    <h6 style="vertical-align: bottom">전자가족관계등록시스템의 증명서 진위확인 메뉴에서 발급일부터 3개월까지 위변조 여부를 확인할 수 있습니다.</h6>
+        <tr>
+            <td th:text="자격"></td>
+            <td colspan="3" th:text="${item.birthDeathReportResidentQualificationCode}"></td>
+        </tr>
+        <tr>
+            <td th:text="전화번호"></td>
+            <td th:text="${item.birthDeathReportResidentPhoneNumber}"></td>
+            <td th:text="이메일"></td>
+            <td th:text="${item.birthDeathReportResidentEmail}"></td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>

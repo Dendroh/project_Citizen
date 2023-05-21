@@ -39,12 +39,12 @@
         </thead>
         <tbody>
         <tr>
-            <td style="width: 80px;" th:text="본인"></td>
-            <td style="width: 80px;" th:text="${baseResident.name}"></td>
-            <td style="width: 200px;" th:text="${baseResident.formattedBirthDate}"></td>
-            <td style="width: 200px;" th:text="${baseResident.residentRegistrationNumber}"></td>
-            <td style="width: 70px;" th:text="${baseResident.genderCode}"></td>
-            <td style="width: 250px;" th:text="${baseResident.registrationBaseAddress}"></td>
+            <td th:text="본인"></td>
+            <td th:text="${baseResident.name}"></td>
+            <td th:text="${baseResident.formattedBirthDate}"></td>
+            <td th:text="${baseResident.residentRegistrationNumber}"></td>
+            <td th:text="${baseResident.genderCode}"></td>
+            <td th:text="${baseResident.registrationBaseAddress}"></td>
         </tr>
         </tbody>
     </table>
@@ -70,12 +70,12 @@
         </thead>
         <tbody>
         <tr th:each="item, i: ${familyResident}">
-            <td style="width: 80px;" th:text="${item.familyRelationshipCode}"></td>
-            <td style="width: 80px;" th:text="${item.familyResidentName}"></td>
-            <td style="width: 80px;" th:text="${item.formattedBirthDate}"></td>
-            <td style="width: 80px;" th:text="${item.familyResidentRegistrationNumber}"></td>
-            <td style="width: 80px;" th:text="${item.familyResidentGenderCode}"></td>
-            <td style="width: 80px;" th:text="${item.familyResidentRegistrationBaseAddress}"></td>
+            <td th:text="${item.familyRelationshipCode}"></td>
+            <td th:text="${item.familyResidentName}"></td>
+            <td th:text="${item.formattedBirthDate}"></td>
+            <td th:text="${item.familyResidentRegistrationNumber}"></td>
+            <td th:text="${item.familyResidentGenderCode}"></td>
+            <td th:text="${item.familyResidentRegistrationBaseAddress}"></td>
         </tr>
         </tbody>
     </table>

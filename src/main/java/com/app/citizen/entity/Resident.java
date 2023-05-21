@@ -71,4 +71,15 @@ public class Resident {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     return birthDate.format(formatter);
   }
+
+  public String getFormattedBirthDateTime() {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy 년 MM 월 dd 일 HH 시 mm 분 (한국시간 : 24시각제로 기제)");
+    return birthDate.format(formatter);
+  }
+
+
+  public String getFormattedDeathDateTime() {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy 년 MM 월 dd 일 HH 시 mm 분 (한국시간 : 24시각제로 기제)");
+    return deathDate.format(formatter);
+  }
 }

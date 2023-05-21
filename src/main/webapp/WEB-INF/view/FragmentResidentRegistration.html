@@ -40,9 +40,9 @@
         </thead>
         <tbody>
         <tr th:each="item, i: ${householdMovement}">
-            <td style="width: 80px;" th:text="${item.lastAddressYn}"></td>
-            <td style="width: 200px;" th:text="${item.houseMovementAddress}"></td>
-            <td style="width: 80px;" th:text="${item.formattedReportDate}"></td>
+            <td th:text="${item.lastAddressYn}"></td>
+            <td th:text="${item.houseMovementAddress}"></td>
+            <td th:text="${item.formattedReportDate}"></td>
         </tr>
         </tbody>
     </table>
@@ -67,11 +67,11 @@
         </thead>
         <tbody>
         <tr th:each="item, i: ${householdComposition}">
-            <td style="width: 80px;" th:text="${item.householdRelationshipCode}"></td>
-            <td style="width: 80px;" th:text="${item.householdCompositionName}"></td>
-            <td style="width: 80px;" th:text="${item.householdCompositionRegistrationNumber}"></td>
-            <td style="width: 80px;" th:text="${item.householdCompositionReportDate}"></td>
-            <td style="width: 80px;" th:text="${item.householdCompositionChangeReasonCode}"></td>
+            <td th:text="${item.householdRelationshipCode}"></td>
+            <td th:text="${item.householdCompositionName}"></td>
+            <td th:text="${item.householdCompositionRegistrationNumber}"></td>
+            <td th:text="${item.householdCompositionReportDate}"></td>
+            <td th:text="${item.householdCompositionChangeReasonCode}"></td>
         </tr>
         </tbody>
     </table>

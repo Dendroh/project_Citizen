@@ -15,15 +15,14 @@ public class BirthDeathReportResident {
   @EmbeddedId
   private Pk pk;
 
-
   @Column(name = "birth_death_report_date")
   private LocalDateTime birthDeathReportDate;
 
-  @Column(name = "birth_report_qualification_code")
+  @Column(name = "birth_report_qualifications_code")
   private String birthReportQualificationsCode;
 
-  @Column(name = "death_report_qualification_code")
-  private String deathReportQualificationCode;
+  @Column(name = "death_report_qualifications_code")
+  private String deathReportQualificationsCode;
 
   @Column(name = "email_address")
   private String emailAddress;
@@ -52,7 +51,7 @@ public class BirthDeathReportResident {
     private Integer residentSerialNumber;
 
     @Column(name = "birth_death_type_code")
-    private Integer birthDeathTypeCode;
+    private String birthDeathTypeCode;
 
     @Column(name = "report_resident_serial_number")
     private Integer reportResident;
