@@ -27,26 +27,26 @@
     </table>
     </br>
     <h3>사망자</h3>
-    <table>
+    <table th:each="item, i: ${deathResident}">
         <tr>
             <td th:text="성명"></td>
-            <td th:text="${deathResident.name}"></td>
+            <td th:text="${item.name}"></td>
         </tr>
         <tr>
             <td th:text="성별"></td>
-            <td th:text="${deathResident.genderCode}"></td>
+            <td th:text="${item.genderCode}"></td>
         </tr>
         <tr>
             <td th:text="사망일시"></td>
-            <td th:text="${deathResident.formattedDeathDateTime}"></td>
+            <td th:text="${item.formattedDeathDateTime}"></td>
         </tr>
         <tr>
             <td th:text="사망장소구분"></td>
-            <td th:text="${deathResident.deathPlaceCode}"></td>
+            <td th:text="${item.deathPlaceCode}"></td>
         </tr>
         <tr>
             <td th:text="사망장소주소"></td>
-            <td th:text="${deathResident.deathPlaceAddress}"></td>
+            <td th:text="${item.deathPlaceAddress}"></td>
         </tr>
     </table>
     </br>

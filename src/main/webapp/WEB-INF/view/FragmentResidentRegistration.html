@@ -19,12 +19,12 @@
     <h1>주민등록등본</h1></br></br>
     <table style="width: 550px">
         <thead>
-        <tr>
+        <tr th:each="item, i: ${householdResident}">
             <th style="width: 170px;">세대주 성명</th>
-            <th style="width: 200px;" th:text="${householdResident.householdResidentName}" }></th>
+            <th style="width: 200px;" th:text="${item.householdResidentName}" }></th>
             <th style="width: 200px;">세대구성 사유 및 일자</th>
-            <th style="width: 200px;" th:text="${householdResident.formattedReportDate} " }></th>
-            <th style="width: 200px;" th:text="${householdResident.householdResidentChangeReasonCode} " }></th>
+            <th style="width: 200px;" th:text="${item.formattedReportDate} " }></th>
+            <th style="width: 200px;" th:text="${item.householdResidentChangeReasonCode} " }></th>
 
         </tr>
         </thead>

@@ -18,12 +18,6 @@ l
 <src/main/java/com/app/citizen/repository/RepositoryBase.java,9/6/96b8c49d88ce4ab8c4972ddf0647fbb55e8a669f
 e
 5src/main/java/com/app/citizen/util/PasswordUtils.java,f/a/fa02bb4fc4d8a508c5de4a06d8f0657a8f67ddb5
-m
-=src/main/java/com/app/citizen/domain/MemberCreateRequest.java,f/2/f219c313c47f1a91f46c2145fb6fdde19b369098
-b
-2src/main/java/com/app/citizen/domain/MemberId.java,b/5/b53d5abf1f923877ed51898964d29a9c2e0f5ad0
-`
-0src/main/java/com/app/citizen/entity/Member.java,6/5/65c048b3489d11ce348448823507ed700ce0d3df
 Z
 *src/main/webapp/WEB-INF/view/error403.html,7/1/71a974c0ff104fbdb973b3cf64241e63608f0a77
 f

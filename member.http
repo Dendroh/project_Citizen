@@ -3,22 +3,22 @@ Host: localhost:8080
 Content-Type: application/json
 
 {
-  "id": "admin",
-  "name": "관리자",
+  "id": "8",
+  "name": "이태원",
+  "pwd": "1234",
+  "authority": "ROLE_GUEST"
+}
+
+###
+
+PUT /members HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "id": "8",
+  "name": "이태원",
   "pwd": "12345",
-  "authority": "ROLE_ADMIN"
-}
-
-###
-
-POST /members HTTP/1.1
-Host: localhost:8080
-Content-Type: application/json
-
-{
-  "id": "1",
-  "name": "남길동",
-  "pwd": "1234",
   "authority": "ROLE_GUEST"
 }
 
@@ -29,74 +29,22 @@ Host: localhost:8080
 Content-Type: application/json
 
 {
-  "id": "2",
-  "name": "남석환",
+  "id": "9",
+  "name": "성춘향",
   "pwd": "1234",
   "authority": "ROLE_GUEST"
 }
 
 ###
 
-POST /members HTTP/1.1
+PUT /members HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
 
 {
-  "id": "3",
-  "name": "박한나",
-  "pwd": "1234",
-  "authority": "ROLE_GUEST"
-}
-
-###
-
-POST /members HTTP/1.1
-Host: localhost:8080
-Content-Type: application/json
-
-{
-  "id": "4",
-  "name": "남기준",
-  "pwd": "1234",
-  "authority": "ROLE_GUEST"
-}
-
-###
-
-POST /members HTTP/1.1
-Host: localhost:8080
-Content-Type: application/json
-
-{
-  "id": "5",
-  "name": "이주은",
-  "pwd": "1234",
-  "authority": "ROLE_GUEST"
-}
-
-###
-
-POST /members HTTP/1.1
-Host: localhost:8080
-Content-Type: application/json
-
-{
-  "id": "6",
-  "name": "이선미",
-  "pwd": "1234",
-  "authority": "ROLE_GUEST"
-}
-
-###
-
-POST /members HTTP/1.1
-Host: localhost:8080
-Content-Type: application/json
-
-{
-  "id": "7",
-  "name": "남기석",
-  "pwd": "1234",
+  "id": "9",
+  "name": "성춘향",
+  "pwd": "12345",
   "authority": "ROLE_GUEST"
 }
 

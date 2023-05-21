@@ -1,7 +1,7 @@
 package com.app.citizen.service;
 
-import com.app.citizen.domain.MemberCreateRequest;
 import com.app.citizen.domain.MemberId;
+import com.app.citizen.domain.MemberRegisterRequest;
 import com.app.citizen.entity.Authority;
 import com.app.citizen.entity.Member;
 import com.app.citizen.repository.MemberRepository;
@@ -22,7 +22,7 @@ public class MemberService {
   }
 
   @Transactional
-  public MemberId createMember(MemberCreateRequest request) {
+  public MemberId registerMember(MemberRegisterRequest request) {
     Member member = new Member();
     member.setId(request.getId());
     member.setName(request.getName());

@@ -1,0 +1,63 @@
+POST /residents HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber": "8",
+  "name": "이태겸",
+  "residentRegistrationNumber": "120314-1234567",
+  "genderCode": "남",
+  "birthDate": "2012-03-14 14:59:00",
+  "birthPlaceCode": "자택",
+  "registrationBaseAddress": "경기도 성남시 분당구 대왕판교로615번길"
+}
+
+###
+
+PUT /residents HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber": "8",
+  "name": "이태원",
+  "residentRegistrationNumber": "120314-1234567",
+  "genderCode": "남",
+  "birthDate": "2012-03-14 14:59:00",
+  "birthPlaceCode": "자택",
+  "registrationBaseAddress": "경기도 성남시 분당구 대왕판교로615번길"
+}
+
+###
+
+POST /residents HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber": "9",
+  "name": "성춘향",
+  "residentRegistrationNumber": "120314-2234567",
+  "genderCode": "여",
+  "birthDate": "2012-03-14 14:59:00",
+  "birthPlaceCode": "병원",
+  "registrationBaseAddress": "경기도 성남시 동작구 동작로615번길"
+}
+
+###
+
+PUT /residents HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber": "9",
+  "name": "성춘향",
+  "residentRegistrationNumber": "120314-2234568",
+  "genderCode": "여",
+  "birthDate": "2012-03-14 14:59:00",
+  "birthPlaceCode": "병원",
+  "registrationBaseAddress": "경기도 성남시 동작구 동작로615번길"
+}
+
+###

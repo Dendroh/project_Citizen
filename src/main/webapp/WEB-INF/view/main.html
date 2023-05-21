@@ -22,32 +22,11 @@
 
 <div class="content">
     <div sec:authorize="isAuthenticated()">
-
         <div sec:authorize="hasAuthority('ROLE_ADMIN')">
-            <table class="styled-table">
-                <thead>
-                <tr>
-                    <th class="column-id">게시물 번호</th>
-                    <th class="column-title">제목</th>
-                    <th class="column-author">게시자</th>
-                    <th class="column-date">게시날짜</th>
-                    <th class="column-views">조회수</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:each=" item, i : ${residentList}" class="table-row">
-                    <td class="column-id" th:text="${item.residentSerialNumber}"></td>
-                    <td class="column-title" th:text="${item.name}"></td>
-                    <td class="column-author" th:text="${item.residentRegistrationNumber}"></td>
-                    <td class="column-date" th:text="${item.genderCode}"></td>
-                    <td class="column-views" th:text="${item.birthDate}"></td>
-                </tr>
-                </tbody>
-            </table>
+            관리자 페이지
         </div>
-
         <div sec:authorize="hasAuthority('ROLE_GUEST')">
-            <span sec:authentication="name" />
+            게스트 페이지
         </div>
 
     </div>

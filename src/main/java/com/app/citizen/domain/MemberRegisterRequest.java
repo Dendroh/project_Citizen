@@ -3,7 +3,7 @@ package com.app.citizen.domain;
 import lombok.Data;
 
 @Data
-public class MemberCreateRequest {
+public class MemberRegisterRequest {
   private String id;
   private String name;
   private String pwd;

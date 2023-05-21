@@ -1,12 +1,9 @@
 package com.app.citizen.controller;
 
-import com.app.citizen.domain.MemberCreateRequest;
 import com.app.citizen.domain.MemberId;
+import com.app.citizen.domain.MemberRegisterRequest;
 import com.app.citizen.service.MemberService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/members")
@@ -18,7 +15,12 @@ public class MemberRestController {
   }
 
   @PostMapping
-  public MemberId createMember(@RequestBody MemberCreateRequest request) {
-    return memberService.createMember(request);
+  public MemberId registerMember(@RequestBody MemberRegisterRequest request) {
+    return memberService.registerMember(request);
+  }
+
+  @PutMapping
+  public MemberId editMember(@RequestBody MemberRegisterRequest request) {
+    return memberService.registerMember(request);
   }
 }
