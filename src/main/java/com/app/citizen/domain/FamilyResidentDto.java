@@ -1,6 +1,7 @@
 package com.app.citizen.domain;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class FamilyResidentDto {
 
@@ -28,5 +29,10 @@ public class FamilyResidentDto {
     this.familyResidentRegistrationNumber = familyResidentRegistrationNumber;
     this.familyResidentGenderCode = familyResidentGenderCode;
     this.familyResidentRegistrationBaseAddress = familyResidentRegistrationBaseAddress;
+  }
+
+  public String getFormattedBirthDate() {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    return familyResidentBirthDate.format(formatter);
   }
 }

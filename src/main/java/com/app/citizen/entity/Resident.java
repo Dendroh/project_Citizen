@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @NoArgsConstructor
@@ -65,4 +66,9 @@ public class Resident {
 
   @OneToMany(mappedBy = "householdCompositionResident", cascade = CascadeType.ALL)
   private List<HouseholdCompositionResident> householdCompositionResidents;
+
+  public String getFormattedBirthDate() {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    return birthDate.format(formatter);
+  }
 }

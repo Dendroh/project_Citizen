@@ -41,7 +41,7 @@
         <tr>
             <td style="width: 80px;" th:text="본인"></td>
             <td style="width: 80px;" th:text="${baseResident.name}"></td>
-            <td style="width: 200px;" th:text="${baseResident.birthDate}"></td>
+            <td style="width: 200px;" th:text="${baseResident.formattedBirthDate}"></td>
             <td style="width: 200px;" th:text="${baseResident.residentRegistrationNumber}"></td>
             <td style="width: 70px;" th:text="${baseResident.genderCode}"></td>
             <td style="width: 250px;" th:text="${baseResident.registrationBaseAddress}"></td>
@@ -72,7 +72,7 @@
         <tr th:each="item, i: ${familyResident}">
             <td style="width: 80px;" th:text="${item.familyRelationshipCode}"></td>
             <td style="width: 80px;" th:text="${item.familyResidentName}"></td>
-            <td style="width: 80px;" th:text="${item.familyResidentBirthDate}"></td>
+            <td style="width: 80px;" th:text="${item.formattedBirthDate}"></td>
             <td style="width: 80px;" th:text="${item.familyResidentRegistrationNumber}"></td>
             <td style="width: 80px;" th:text="${item.familyResidentGenderCode}"></td>
             <td style="width: 80px;" th:text="${item.familyResidentRegistrationBaseAddress}"></td>
