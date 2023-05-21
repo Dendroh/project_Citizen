@@ -28,6 +28,8 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class ResidentRepositoryTest {
   @Autowired
   private FamilyRelationshipRepository familyRelationshipRepository;
+  @Autowired
+  private ResidentRepository residentRepository;
 
   @Test
   void test() {
@@ -35,4 +37,9 @@ public class ResidentRepositoryTest {
     assertThat(familyRelationships.size()).isEqualTo(4);
   }
 
+  @Test
+  void test2() {
+    List<Resident> residents = residentRepository.findAll();
+    assertThat(residents.size()).isEqualTo(7);
+  }
 }

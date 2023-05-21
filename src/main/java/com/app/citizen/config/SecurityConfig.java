@@ -28,9 +28,7 @@ public class SecurityConfig {
   public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
     return httpSecurity
             .authorizeHttpRequests()
-              .requestMatchers("/admin/**").hasAnyAuthority("ROLE_ADMIN")
-              .requestMatchers("/guest/**").hasAnyAuthority("ROLE_GUEST")
-              .requestMatchers("redirect-index").authenticated()
+              .requestMatchers("/css/**").permitAll()
               .anyRequest().permitAll()
               .and()
 

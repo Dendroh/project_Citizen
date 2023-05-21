@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <title>사망신고서</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+<div sec:authorize="isAuthenticated()">
+    <div sec:authorize="hasAuthority('ROLE_ADMIN')">
+    </div>
+    <div sec:authorize="hasAuthority('ROLE_GUEST')">
+    </div>
+</div>
+<div style="width: 700px; border: black solid 1px; margin: 10px; padding: 20px">
+    <h1>사망신고서</h1></br></br>
+    <table>
+        <thead>
+        <tr>
+            <th style="width: 150px;">등록기준지</th>
+            <th style="width: 400px;">서울특별시 영등포구 여의도동 1번지 1234</th>
+        </tr>
+        </thead>
+    </table></br></br>
+    <table>
+        <thead>
+        <tr>
+            <th style="width: 80px;">구분</th>
+            <th style="width: 250px;">성명</th>
+            <th style="width: 200px;">출생연월일</th>
+            <th style="width: 200px;">주민등록번호</th>
+            <th style="width: 70px;">성별</th>
+            <th style="width: 70px;">본적</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table></br></br>
+    <table>
+        <thead>
+        <tr>
+            <th style="width: 150px;">가족사항</th>
+        </tr>
+        </thead>
+    </table></br>
+    <table>
+        <thead>
+        <tr>
+            <th style="width: 80px;">구분</th>
+            <th style="width: 250px;">성명</th>
+            <th style="width: 200px;">출생연월일</th>
+            <th style="width: 200px;">주민등록번호</th>
+            <th style="width: 70px;">성별</th>
+            <th style="width: 70px;">본적</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table></br></br>
+    <h5>위 가족관계증명서는 가족관계등록부의 기록사항과 틀림없음을 증명합니다.</h5></br>
+    <h5>2023년 5월 17일</h5></br>
+    <h3>법원행정처 전산정보중앙관리소 전산운영책임관 홍길동</h3></br>
+    <h4 style="text-align: left">위 증명서는 가족관계의 등록 등에 관한 법률 제 15조 제4항 및 가족관계의 등록 등에 관한 규칙 제 21조의2제2항에 따른 등록사항을 현출한 특정증명서입니다.</h4>
+    <h4 style="text-align: right">발급시각 : 17시 01분</h4>
+    <h4 style="text-align: right">신청인 : 김본인</h4></br></br>
+    <h6 style="vertical-align: bottom">발행번호 : 0000-0000-0000-0000</h6>
+    <h6 style="vertical-align: bottom">전자가족관계등록시스템의 증명서 진위확인 메뉴에서 발급일부터 3개월까지 위변조 여부를 확인할 수 있습니다.</h6>
+</div>
+</body>
+</html>

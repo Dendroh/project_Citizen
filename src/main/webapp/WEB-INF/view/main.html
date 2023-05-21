@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <title>주민관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+<div class="titleBar">
+    <a class="login-button" href="/">메인화면</a>
+    <h1>주민관리시스템</h1>
+    <div sec:authorize="!isAuthenticated()">
+        <a class="login-button" href="/login">로그인</a>
+    </div>
+    <div sec:authorize="isAuthenticated()">
+        <a class="login-button" href="/logout">로그아웃</a>
+    </div>
+</div>
+
+<div class="content">
+    <div sec:authorize="isAuthenticated()">
+
+        <div sec:authorize="hasAuthority('ROLE_ADMIN')">
+            <table class="styled-table">
+                <thead>
+                <tr>
+                    <th class="column-id">게시물 번호</th>
+                    <th class="column-title">제목</th>
+                    <th class="column-author">게시자</th>
+                    <th class="column-date">게시날짜</th>
+                    <th class="column-views">조회수</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each=" item, i : ${residentList}" class="table-row">
+                    <td class="column-id" th:text="${item.residentSerialNumber}"></td>
+                    <td class="column-title" th:text="${item.name}"></td>
+                    <td class="column-author" th:text="${item.residentRegistrationNumber}"></td>
+                    <td class="column-date" th:text="${item.genderCode}"></td>
+                    <td class="column-views" th:text="${item.birthDate}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div sec:authorize="hasAuthority('ROLE_GUEST')">
+            게스트 페이지
+        </div>
+
+    </div>
+</div>
+
+<div class="menuBar">
+    <a class="menuBar-button" href="/family-relationship">출생신고서</a>
+    <a class="menuBar-button" href="/resident-registration">사망신고서</a>
+    <a class="menuBar-button" href="/birth-register">가족관계증명서</a>
+    <a class="menuBar-button" href="/death-register">주민등록등본</a>
+</div>
+
+</body>
+</html>

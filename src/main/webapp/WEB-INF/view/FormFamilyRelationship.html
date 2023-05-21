@@ -4,7 +4,7 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8"/>
-    <title>로그인</title>
+    <title>주민관리시스템</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
@@ -21,11 +21,14 @@
 </div>
 
 <div class="content">
-    <form method="post" action="/login-process">
-        Username: <input type="text" name="username" /><br />
-        Password: <input type="password" name="password" /><br />
-        <input type="submit" value="일반 사용자 로그인"/>
-    </form>
+    <div sec:authorize="isAuthenticated()">
+        <div sec:authorize="hasAuthority('ROLE_ADMIN')">
+            <th:block th:include="fragments/FamilyRelationship.html"/>
+        </div>
+        <div sec:authorize="hasAuthority('ROLE_GUEST')">
+            <th:block th:include="fragments/FamilyRelationship.html"/>
+        </div>
+    </div>
 </div>
 
 <div class="menuBar">
