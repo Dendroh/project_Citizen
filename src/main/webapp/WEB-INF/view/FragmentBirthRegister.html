@@ -19,9 +19,9 @@
     <h1>출생신고서</h1></br></br>
     <table style="width: 550px">
         <thead>
-        <tr>
+        <tr th:each="item, i: ${birthReportResident}">
             <th style="width: 150px;">신고일</th>
-            <th style="width: 350px;" th:text="${#calendars.format(#calendars.createNow(), 'yyyy년 MM월 dd일')}"></th>
+            <th style="width: 350px;" th:text="${item.FormattedDate}"></th>
         </tr>
         </thead>
     </table>
