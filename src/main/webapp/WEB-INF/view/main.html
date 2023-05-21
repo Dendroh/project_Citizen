@@ -47,7 +47,7 @@
         </div>
 
         <div sec:authorize="hasAuthority('ROLE_GUEST')">
-            게스트 페이지
+            <span sec:authentication="name" />
         </div>
 
     </div>

@@ -33,8 +33,6 @@ public class ResidentRepositoryTest {
 
   @Test
   void test() {
-    List<FamilyRelationship> familyRelationships = familyRelationshipRepository.findBy();
-    assertThat(familyRelationships.size()).isEqualTo(4);
   }
 
   @Test

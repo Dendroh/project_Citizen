@@ -18,4 +18,8 @@ public class ResidentService {
   public List<Resident> findAllBy() {
     return residentRepository.findAll();
   }
+
+  public Resident findResidentBy(int serialNumber) {
+    return residentRepository.findResidentByResidentSerialNumber(serialNumber);
+  }
 }

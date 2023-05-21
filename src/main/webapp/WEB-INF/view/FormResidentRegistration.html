@@ -23,10 +23,10 @@
 <div class="content">
     <div sec:authorize="isAuthenticated()">
         <div sec:authorize="hasAuthority('ROLE_ADMIN')">
-            <th:block th:include="fragments/ResidentRegistration.html"/>
+            <th:block th:include="FragmentResidentRegistration.html"/>
         </div>
         <div sec:authorize="hasAuthority('ROLE_GUEST')">
-            <th:block th:include="fragments/ResidentRegistration.html"/>
+            <th:block th:include="FragmentResidentRegistration.html"/>
         </div>
     </div>
 </div>
