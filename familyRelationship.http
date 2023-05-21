@@ -1,0 +1,21 @@
+POST /residents/8/relationship/ HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyResidentSerialNumber": "9",
+  "familyRelationshipCode": "배우자"
+}
+
+###
+
+POST /residents/9/relationship/ HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyResidentSerialNumber": "8",
+  "familyRelationshipCode": "배우자"
+}
+
+###

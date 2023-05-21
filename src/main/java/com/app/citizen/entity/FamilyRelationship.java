@@ -35,9 +35,9 @@ public class FamilyRelationship {
   @Embeddable
   public static class Pk implements Serializable {
     @Column(name = "base_resident_serial_number")
-    private Integer baseResidentSerialNumber;
+    private int baseResidentSerialNumber;
 
     @Column(name = "family_resident_serial_number")
-    private Integer familyResidentSerialNumber;
+    private int familyResidentSerialNumber;
   }
 }

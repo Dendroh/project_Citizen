@@ -14,7 +14,7 @@ Content-Type: application/json
 
 ###
 
-PUT /residents HTTP/1.1
+PUT /residents/8 HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
 
@@ -46,7 +46,7 @@ Content-Type: application/json
 
 ###
 
-PUT /residents HTTP/1.1
+PUT /residents/9 HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
 

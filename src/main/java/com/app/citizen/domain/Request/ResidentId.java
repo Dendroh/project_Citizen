@@ -1,4 +1,4 @@
-package com.app.citizen.domain;
+package com.app.citizen.domain.Request;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
 package com.app.citizen.service;
 
-import com.app.citizen.domain.MemberId;
-import com.app.citizen.domain.MemberRegisterRequest;
+import com.app.citizen.domain.Request.MemberId;
+import com.app.citizen.domain.Request.MemberRegisterRequest;
 import com.app.citizen.entity.Authority;
 import com.app.citizen.entity.Member;
 import com.app.citizen.repository.MemberRepository;

@@ -1,7 +1,7 @@
 package com.app.citizen.controller;
 
-import com.app.citizen.domain.MemberId;
-import com.app.citizen.domain.MemberRegisterRequest;
+import com.app.citizen.domain.Request.MemberId;
+import com.app.citizen.domain.Request.MemberRegisterRequest;
 import com.app.citizen.service.MemberService;
 import org.springframework.web.bind.annotation.*;
 
