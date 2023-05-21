@@ -40,11 +40,12 @@ public class SecurityConfig {
               .successHandler(loginSuccessHandler())
               .and()
 
-//            .oauth2Login()
-//              .clientRegistrationRepository(clientRegistrationRepository())
-//              .authorizedClientService(authorizedClientService())
-//              .successHandler(loginSuccessHandler())
-//              .and()
+            .oauth2Login()
+              .loginPage("/login")
+              .clientRegistrationRepository(clientRegistrationRepository())
+              .authorizedClientService(authorizedClientService())
+              .successHandler(loginSuccessHandler())
+              .and()
 
             .logout()
               .deleteCookies("SESSION")

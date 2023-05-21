@@ -21,11 +21,18 @@
 </div>
 
 <div class="content">
-    <form method="post" action="/login-process">
-        Username: <input type="text" name="username" /><br />
-        Password: <input type="password" name="password" /><br />
-        <input type="submit" value="일반 사용자 로그인"/>
-    </form>
+    <div>
+        <form method="post" action="/login-process">
+            Username: <input type="text" name="username" /><br />
+            Password: <input type="password" name="password" /><br />
+            <input type="submit" value="일반 사용자 로그인"/>
+        </form>
+    </div>
+    <div>
+        <form action="/oauth2/authorization/github" method="get">
+            <input type="submit" value="GitHub 사용자 로그인" />
+        </form>
+    </div>
 </div>
 
 <div class="menuBar">

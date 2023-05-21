@@ -9,6 +9,8 @@ import com.app.citizen.entity.BirthDeathReportResident;
 import com.app.citizen.entity.Resident;
 import com.app.citizen.repository.BirthDeathReportResidentRepository;
 import com.app.citizen.repository.ResidentRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -29,8 +31,8 @@ public class ResidentService {
     this.birthDeathReportResidentRepository = birthDeathReportResidentRepository;
   }
 
-  public List<Resident> findAllBy() {
-    return residentRepository.findAll();
+  public Page<Resident> findAllBy(Pageable pageable) {
+    return residentRepository.getAllBy(pageable);
   }
 
   public Resident findResidentBy(int serialNumber) {
