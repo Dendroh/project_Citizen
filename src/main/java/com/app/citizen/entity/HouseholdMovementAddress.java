@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @NoArgsConstructor
 @Getter
@@ -39,5 +40,10 @@ public class HouseholdMovementAddress {
 
     @Column(name = "house_movement_report_date")
     private LocalDateTime houseMovementReportDate;
+  }
+
+  public String getFormattedReportDate() {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    return pk.houseMovementReportDate.format(formatter);
   }
 }

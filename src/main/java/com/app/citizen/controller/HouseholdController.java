@@ -25,8 +25,12 @@ public class HouseholdController {
   public String homeGet(Model model, Principal principal) {
     model.addAttribute("baseResident",
             residentService.findResidentBy(Integer.parseInt(principal.getName())));
-    model.addAttribute("household",
-            householdService.findResidentsBy(Integer.parseInt(principal.getName())));
+    model.addAttribute("householdResident",
+            householdService.findResidentBy(Integer.parseInt(principal.getName())));
+    model.addAttribute("householdMovement",
+            householdService.findMovementsBy(Integer.parseInt(principal.getName())));
+    model.addAttribute("householdComposition",
+            householdService.findHouseholdBy(Integer.parseInt(principal.getName())));
     return "FormResidentRegistration";
   }
 }

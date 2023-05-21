@@ -20,8 +20,12 @@
     <table style="width: 550px">
         <thead>
         <tr>
-            <th style="width: 150px;">등록기준지</th>
-            <th style="width: 400px;" th:text="${baseResident.registrationBaseAddress}" }></th>
+            <th style="width: 170px;">세대주 성명</th>
+            <th style="width: 200px;" th:text="${householdResident.householdResidentName}" }></th>
+            <th style="width: 200px;">세대구성 사유 및 일자</th>
+            <th style="width: 200px;" th:text="${householdResident.formattedReportDate} " }></th>
+            <th style="width: 200px;" th:text="${householdResident.householdResidentChangeReasonCode} " }></th>
+
         </tr>
         </thead>
     </table>
@@ -29,22 +33,16 @@
     <table>
         <thead>
         <tr>
-            <th style="width: 80px;">구분</th>
-            <th style="width: 80px;">성명</th>
-            <th style="width: 200px;">출생연월일</th>
-            <th style="width: 200px;">주민등록번호</th>
-            <th style="width: 70px;">성별</th>
-            <th style="width: 250px;">본적</th>
+            <th style="width: 80px;">현주소</th>
+            <th style="width: 200px;">주소</th>
+            <th style="width: 80px;">신고일</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td style="width: 80px;" th:text="본인"></td>
-            <td style="width: 80px;" th:text="${baseResident.name}"></td>
-            <td style="width: 200px;" th:text="${baseResident.formattedBirthDate}"></td>
-            <td style="width: 200px;" th:text="${baseResident.residentRegistrationNumber}"></td>
-            <td style="width: 70px;" th:text="${baseResident.genderCode}"></td>
-            <td style="width: 250px;" th:text="${baseResident.registrationBaseAddress}"></td>
+        <tr th:each="item, i: ${householdMovement}">
+            <td style="width: 80px;" th:text="${item.lastAddressYn}"></td>
+            <td style="width: 200px;" th:text="${item.houseMovementAddress}"></td>
+            <td style="width: 80px;" th:text="${item.formattedReportDate}"></td>
         </tr>
         </tbody>
     </table>
@@ -52,7 +50,7 @@
     <table style="width: 550px">
         <thead>
         <tr>
-            <th style="width: 150px;">가족사항</th>
+            <th style="width: 150px;">세대원 구성</th>
         </tr>
         </thead>
     </table>
@@ -68,7 +66,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="item, i: ${household}">
+        <tr th:each="item, i: ${householdComposition}">
             <td style="width: 80px;" th:text="${item.householdRelationshipCode}"></td>
             <td style="width: 80px;" th:text="${item.householdCompositionName}"></td>
             <td style="width: 80px;" th:text="${item.householdCompositionRegistrationNumber}"></td>
@@ -78,15 +76,9 @@
         </tbody>
     </table>
     </br></br>
-    <h5>위 가족관계증명서는 가족관계등록부의 기록사항과 틀림없음을 증명합니다.</h5>
-    <h5 th:text="${#calendars.format(#calendars.createNow(), 'yyyy년 MM월 dd일')}"></h5>
-    <h3>법원행정처 전산정보중앙관리소 전산운영책임관 홍길동</h3>
-    <h4 style="text-align: left">위 증명서는 가족관계의 등록 등에 관한 법률 제 15조 제4항 및 가족관계의 등록 등에 관한 규칙 제 21조의2제2항에 따른 등록사항을 현출한
-        특정증명서입니다.</h4>
-    <h4 style="text-align: right" th:text="${#calendars.format(#calendars.createNow(), '발급시각 : HH시 mm분')}"></h4>
-    <h4 style="text-align: right" th:text="${baseResident.name}"></h4></br>
+    <h5>1. 본인이나 세대원은 전자민원에서 무료로 주민등록표를 열람하거나 등초본을 교부받을 수 있습니다.</h5>
+    <h5>2. 전자문서로 교부하는 경우에는 한자를 생략하여 교부 할 수 있습니다.</h5>
     <h6 style="vertical-align: bottom">발행번호 : 0000-0000-0000-0000</h6>
-    <h6 style="vertical-align: bottom">전자가족관계등록시스템의 증명서 진위확인 메뉴에서 발급일부터 3개월까지 위변조 여부를 확인할 수 있습니다.</h6>
 </div>
 </body>
 </html>
