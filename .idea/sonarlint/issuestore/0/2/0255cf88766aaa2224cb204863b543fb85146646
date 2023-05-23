@@ -1,7 +1,0 @@
-
-O
-java:S2699#"-Add at least one assertion to this test case.(¡“í†ýÿÿÿÿ8Åù˜ïƒ1
-@
-java:S5786"Remove this 'public' modifier.(½õƒ‚ûÿÿÿÿ8Ë¬Õ—ƒ1
-N
-java:S5838)"1Use assertThat(actual).hasSize(expected) instead.(«ÈñÎ8Ì¬Õ—ƒ1
