@@ -22,6 +22,7 @@
 
 <div class="content">
     <div sec:authorize="isAuthenticated()">
+        <div sec:authentication="name"></div>
         <div sec:authorize="hasAuthority('ROLE_ADMIN')">
             <h1>관리자 페이지</h1>
             <button class="login-button" th:disabled="${!residents.hasPrevious()}" th:onclick="'window.location.href=\'' + @{/main(size=${size}, page=${page - 1})} + '\''">Previous</button>
@@ -48,8 +49,6 @@
                 </tbody>
             </table>
         </div>
-
-
 
         <div sec:authorize="hasAuthority('ROLE_GUEST')">
             게스트 페이지
