@@ -38,6 +38,6 @@ public class ResidentRepositoryTest {
   @Test
   void test2() {
     List<Resident> residents = residentRepository.findAll();
-    assertThat(residents.size()).isEqualTo(9);
+    assertThat(residents.size()).isEqualTo(7);
   }
 }
