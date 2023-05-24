@@ -25,29 +25,7 @@
         <div sec:authentication="name"></div>
         <div sec:authorize="hasAuthority('ROLE_ADMIN')">
             <h1>관리자 페이지</h1>
-            <button class="login-button" th:disabled="${!residents.hasPrevious()}" th:onclick="'window.location.href=\'' + @{/main(size=${size}, page=${page - 1})} + '\''">Previous</button>
-            <button class="login-button" th:disabled="${!residents.hasNext()}" th:onclick="'window.location.href=\'' + @{/main(size=${size}, page=${page + 1})} + '\''">Next</button>
-            </br></br>
-            <table>
-                <thead>
-                <tr>
-                    <th>이름</th>
-                    <th>주민등록번호</th>
-                    <th>성별</th>
-                    <th>생년월일시</th>
-                    <th>본적지</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:each="item, i: ${residents}">
-                    <td th:text="${item.name}"></td>
-                    <td th:text="${item.residentRegistrationNumber}"></td>
-                    <td th:text="${item.genderCode}"></td>
-                    <td th:text="${item.FormattedBirthDate}"></td>
-                    <td th:text="${item.registrationBaseAddress}"></td>
-                </tr>
-                </tbody>
-            </table>
+
         </div>
 
         <div sec:authorize="hasAuthority('ROLE_GUEST')">
@@ -55,6 +33,30 @@
         </div>
 
     </div>
+
+    <button class="login-button" th:disabled="${!residents.hasPrevious()}" th:onclick="'window.location.href=\'' + @{/main(size=${size}, page=${page - 1})} + '\''">Previous</button>
+    <button class="login-button" th:disabled="${!residents.hasNext()}" th:onclick="'window.location.href=\'' + @{/main(size=${size}, page=${page + 1})} + '\''">Next</button>
+    </br></br>
+    <table>
+        <thead>
+        <tr>
+            <th>이름</th>
+            <th>주민등록번호</th>
+            <th>성별</th>
+            <th>생년월일시</th>
+            <th>본적지</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item, i: ${residents}">
+            <td th:text="${item.name}"></td>
+            <td th:text="${item.residentRegistrationNumber}"></td>
+            <td th:text="${item.genderCode}"></td>
+            <td th:text="${item.FormattedBirthDate}"></td>
+            <td th:text="${item.registrationBaseAddress}"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 <div class="menuBar">
