@@ -40,10 +40,6 @@ f
 6src/main/java/com/app/citizen/domain/HouseholdDto.java,f/f/ff354d5ddddba72c75aeffc4503efa666d2e33c4
 u
 Esrc/main/java/com/app/citizen/domain/BirthDeathReportResidentDto.java,0/c/0c1b1d9705f2afa1ce97d4832c597f128e2e6066
-q
-Asrc/main/java/com/app/citizen/controller/HouseholdController.java,8/9/89d60fb1adc449bbda3fcae916f8fbafa2592806
-s
-Csrc/main/java/com/app/citizen/controller/DeathReportController.java,f/1/f1092fada5d595a3ade51c45d5136c54bca08dd8
 h
 8src/main/java/com/app/citizen/service/MemberService.java,8/1/81c3ee671777a747e1d1a83ad66e7a5b843c828d
 j
@@ -62,10 +58,6 @@ w
 Gsrc/main/java/com/app/citizen/domain/Request/MemberRegisterRequest.java,7/1/711231325121f4224cfd5f878fbb4bbbe36edf2a
 r
 Bsrc/main/java/com/app/citizen/entity/BirthDeathReportResident.java,b/6/b62ed3f999c9692469198024a96bf8357c64a08d
-s
-Csrc/main/java/com/app/citizen/controller/BirthReportController.java,3/9/3904cd67725f6909e963f7afc47d1bee0930b806
-@
-test/member.http,2/c/2c7b1db9029287fbcf38b6a26bfd3cee24c20bf1
 n
 >src/main/java/com/app/citizen/domain/Request/BirthDeathId.java,4/7/4748f89b506fef67a1862b78903d0c936486be0e
 g
@@ -82,8 +74,6 @@ k
 ;src/main/java/com/app/citizen/auth/LoginSuccessHandler.java,7/4/7417f5bbcb244b120d8b3498cd51e8ba5d810835
 L
 test/familyRelationship.http,c/b/cb35cbb9968f090dcca66aa4f8e46f36e238f9e5
-r
-Bsrc/main/java/com/app/citizen/controller/MemberRestController.java,0/9/09497b308d1b834928ca63520ea5d6554c81f383
 c
 3src/main/java/com/app/citizen/config/WebConfig.java,b/6/b670877402bdb283c966d6d2275d3a58ab2893bd
 j
@@ -100,8 +90,6 @@ r
 Bsrc/main/java/com/app/citizen/service/CustomUserDetailService.java,9/4/9421fd58cb8b34ed33346eaa70fb2672169f3e13
 `
 0src/main/java/com/app/citizen/entity/Member.java,6/5/65c048b3489d11ce348448823507ed700ce0d3df
-m
-=src/main/java/com/app/citizen/controller/LoginController.java,b/2/b269c64b512515aaf66e378878115ef8314fce0c
 n
 >src/main/webapp/WEB-INF/view/FragmentResidentRegistration.html,1/f/1f2d06d557957e004b25b84eae5e9084bc7874bb
 f
@@ -122,5 +110,3 @@ n
 >src/main/java/com/app/citizen/repository/MemberRepository.java,1/2/1222f8fb149e1d959e8afd70df82d3255955cb3f
 p
 @src/main/java/com/app/citizen/repository/ResidentRepository.java,b/4/b435c0bed293eb9332610fef3c722c42055f08a8
-z
-Jsrc/main/java/com/app/citizen/controller/FamilyRelationshipController.java,7/6/7614acaadc51fe3919bd3d948fa1316f913615da

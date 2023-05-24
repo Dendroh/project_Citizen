@@ -19,7 +19,7 @@ public class RootConfig {
   public DataSource dataSource() {
     BasicDataSource dataSource = new BasicDataSource();
     dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-    dataSource.setUrl("jdbc:mysql://localhost:3306/module_Citizen");
+    dataSource.setUrl("jdbc:mysql://20.249.93.170:3306/module_Citizen");
     dataSource.setUsername("root");
     dataSource.setPassword("1681");
 
