@@ -88,7 +88,7 @@ public class SecurityConfig {
 
   @Bean
   public PasswordEncoder passwordEncoder() {
-    return new BCryptPasswordEncoder();
+    return new PlaintextPasswordEncoder();
   }
 
   @Bean
@@ -107,5 +107,17 @@ public class SecurityConfig {
             .clientSecret("0cef5f0e1999de91a793a39e29c30be9255d0777")
             .userNameAttributeName("name")
             .build();
+  }
+
+  public class PlaintextPasswordEncoder implements PasswordEncoder {
+    @Override
+    public String encode(CharSequence rawPassword) {
+      return rawPassword.toString();
+    }
+
+    @Override
+    public boolean matches(CharSequence rawPassword, String encodedPassword) {
+      return rawPassword.toString().equals(encodedPassword);
+    }
   }
 }
