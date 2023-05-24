@@ -1,8 +1,6 @@
 
 j
 :src/main/java/com/app/citizen/entity/CertificateIssue.java,1/2/1275d614ac31545e7fa60e221e9025702947bdc2
-7
-pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
@@ -88,20 +86,12 @@ p
 test/death.http,5/b/5bf1937eaf7a7fdd4f10ee3366978210ca6e508f
 ?
 test/birth.http,1/3/13cdf462a262fd42965231d3164cdcd0e936fc6b
-z
-Jsrc/main/java/com/app/citizen/controller/FamilyRelationshipController.java,7/6/7614acaadc51fe3919bd3d948fa1316f913615da
-q
-Asrc/main/java/com/app/citizen/controller/HouseholdController.java,8/9/89d60fb1adc449bbda3fcae916f8fbafa2592806
 @
 test/member.http,2/c/2c7b1db9029287fbcf38b6a26bfd3cee24c20bf1
 k
 ;src/main/java/com/app/citizen/auth/LoginSuccessHandler.java,7/4/7417f5bbcb244b120d8b3498cd51e8ba5d810835
 t
 Dsrc/test/java/com/app/citizen/repository/ResidentRepositoryTest.java,0/2/0255cf88766aaa2224cb204863b543fb85146646
-s
-Csrc/main/java/com/app/citizen/controller/BirthReportController.java,3/9/3904cd67725f6909e963f7afc47d1bee0930b806
-s
-Csrc/main/java/com/app/citizen/controller/DeathReportController.java,f/1/f1092fada5d595a3ade51c45d5136c54bca08dd8
 r
 Bsrc/main/java/com/app/citizen/controller/MemberRestController.java,0/9/09497b308d1b834928ca63520ea5d6554c81f383
 t
@@ -124,3 +114,13 @@ y
 Isrc/main/java/com/app/citizen/domain/Request/ResidentRegisterRequest.java,2/4/2431f1bed964b29e847dd87e2861f06ba22b6cb4
 v
 Fsrc/main/java/com/app/citizen/entity/HouseholdCompositionResident.java,9/5/9511db8e7ccf844f8638d1a2322e22115976e778
+r
+Bsrc/main/java/com/app/citizen/entity/HouseholdMovementAddress.java,7/3/73732a6f42ad89cce1d33f8e4f120dabffb1064c
+V
+&src/main/webapp/WEB-INF/view/main.html,5/2/52e21b4e4945ac4d44db53f2b3c29f51e6723e59
+r
+Bsrc/main/java/com/app/citizen/service/CustomUserDetailService.java,9/4/9421fd58cb8b34ed33346eaa70fb2672169f3e13
+`
+0src/main/java/com/app/citizen/entity/Member.java,6/5/65c048b3489d11ce348448823507ed700ce0d3df
+W
+'src/main/webapp/WEB-INF/view/login.html,6/7/6743a55c8b510928836a87d5e1e7f5219205dcd8
