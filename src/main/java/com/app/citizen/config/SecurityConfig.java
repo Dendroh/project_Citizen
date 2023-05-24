@@ -88,7 +88,7 @@ public class SecurityConfig {
 
   @Bean
   public PasswordEncoder passwordEncoder() {
-    return new PlaintextPasswordEncoder();
+    return new BCryptPasswordEncoder();
   }
 
   @Bean
