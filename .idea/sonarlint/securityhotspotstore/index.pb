@@ -112,16 +112,12 @@ v
 Fsrc/main/java/com/app/citizen/entity/HouseholdCompositionResident.java,9/5/9511db8e7ccf844f8638d1a2322e22115976e778
 r
 Bsrc/main/java/com/app/citizen/entity/HouseholdMovementAddress.java,7/3/73732a6f42ad89cce1d33f8e4f120dabffb1064c
-V
-&src/main/webapp/WEB-INF/view/main.html,5/2/52e21b4e4945ac4d44db53f2b3c29f51e6723e59
 r
 Bsrc/main/java/com/app/citizen/service/CustomUserDetailService.java,9/4/9421fd58cb8b34ed33346eaa70fb2672169f3e13
 `
 0src/main/java/com/app/citizen/entity/Member.java,6/5/65c048b3489d11ce348448823507ed700ce0d3df
 W
 'src/main/webapp/WEB-INF/view/login.html,6/7/6743a55c8b510928836a87d5e1e7f5219205dcd8
-l
-<src/main/java/com/app/citizen/controller/MainController.java,0/5/05022ba975ce35f2bba356f5cc928ca4dc25259e
 4
 mvnw,5/d/5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
 :
