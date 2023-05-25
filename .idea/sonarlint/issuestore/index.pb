@@ -88,8 +88,6 @@ p
 test/member.http,2/c/2c7b1db9029287fbcf38b6a26bfd3cee24c20bf1
 k
 ;src/main/java/com/app/citizen/auth/LoginSuccessHandler.java,7/4/7417f5bbcb244b120d8b3498cd51e8ba5d810835
-t
-Dsrc/test/java/com/app/citizen/repository/ResidentRepositoryTest.java,0/2/0255cf88766aaa2224cb204863b543fb85146646
 r
 Bsrc/main/java/com/app/citizen/controller/MemberRestController.java,0/9/09497b308d1b834928ca63520ea5d6554c81f383
 t
@@ -122,3 +120,10 @@ Bsrc/main/java/com/app/citizen/service/CustomUserDetailService.java,9/4/9421fd5
 0src/main/java/com/app/citizen/entity/Member.java,6/5/65c048b3489d11ce348448823507ed700ce0d3df
 W
 'src/main/webapp/WEB-INF/view/login.html,6/7/6743a55c8b510928836a87d5e1e7f5219205dcd8
+l
+<src/main/java/com/app/citizen/controller/MainController.java,0/5/05022ba975ce35f2bba356f5cc928ca4dc25259e
+:
+
+Dockerfile,6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4
+4
+mvnw,5/d/5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
