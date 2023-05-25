@@ -8,7 +8,7 @@
     <artifactId>citizen</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>citizen</name>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
